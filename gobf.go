@@ -37,7 +37,7 @@ func (bf *bruteforce) Do(ctx context.Context, fn func(pattern string)) error {
 	return bf.do(ctx, bf.dict(), bf.size, fn)
 }
 
-// results creates password candidates from a dictionary of given characters.
+// results creates pattern candidates from a dictionary of given characters.
 func (bf *bruteforce) do(ctx context.Context, chars []string, size int, fn func(pattern string)) error {
 	var cnt int64
 	var body func(pos int, part string)
