@@ -13,13 +13,16 @@ func main() {
 		gobf.WithUpper(true),
 		gobf.WithLower(true),
 		gobf.WithSize(4),
+		gobf.WithConcrencyLimit(1000000),
 	)
 	if err != nil {
 		log.Fatal(err)
 	}
 
+	log.Println("start to search pattern: s3Df")
+
 	err = bf.Do(context.Background(), func(pattern string) {
-		if pattern == "s3sx" {
+		if pattern == "s3Df" {
 			log.Printf("find: %s\n", pattern)
 		}
 	})
