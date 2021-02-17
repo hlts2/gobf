@@ -19,7 +19,6 @@ go get github.com/hlts2/gobf
 ## Example
 
 ```go
-
 package main
 
 import (
